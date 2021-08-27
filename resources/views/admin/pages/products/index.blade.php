@@ -26,8 +26,10 @@
      {{-- testar se existe a variavel teste3 --}} 
       @if(isset($products))
           @foreach ($products as $product)
-              
-              <p class="@if ($loop->last) last @endif">  {{$product}} </p>
+
+          <p class="@if ($loop->last) last @endif">  {{$product}} </p>
+          {{-- {{$product->title}} --}} 
+        {{--      <img src='{{url("storage/{$prodcut->image}")}}'> --}} 
           @endforeach
      @endif 
 

@@ -84,10 +84,13 @@ class ProductController extends Controller
        //dd($request->has('teste'));
        //dd($request->input('teste', 'default'));
        //dd($request->except('_token', 'name_'));
-
+       
        if ($request->file ('photo')-> isValid()) {
+           //fazer upload com patch
+
          //     dd($request->file('photo')->store('products'));
          $nameFile = $request->name . '.' . $request->photo->extension();
+         //nome customizado
          dd($request->file('photo')->storeAs('products', $nameFile));
 
          }
