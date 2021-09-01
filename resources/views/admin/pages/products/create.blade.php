@@ -18,15 +18,23 @@
   </ul>  
 @endif
 
-<form action = "{{route ('products.store') }}" method = "post" enctype="multipart/form-data"> 
+
+
+<form action="{{route ('products.store') }}" method="post" enctype="multipart/form-data"> 
   
     <!--  token para validar o token do formulario --> 
      @csrf
+
+     <!--   // Agora cria o model Post, e depois salva os dados
+         // Post::create(array aqui);
+         // Basta seguir o curso, o seu form estava errado
+         // aonde exatamente, nao consegui ver
+          //somente  o espaço? Sim! :) credo, obrigado --> 
     
-    <input type = "text" name ="name " placeholder="Nome:" > 
-    <input type = "text" name ="description " placeholder="Descrição:" > 
-    <input  type="file" name = "photo">
-    <button type = "submit"> Enviar </button> 
+    <input type="text" name="name" placeholder="Nome:" > 
+    <input type="text" name="description" placeholder="Descrição:" > 
+    <input  type="file" name="photo">
+    <button type="submit"> Enviar </button> 
     
 </form>
 

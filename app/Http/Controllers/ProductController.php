@@ -66,14 +66,13 @@ class ProductController extends Controller
      //request cria um objeto request e joga pra dentro de request
     public function store(Request $request)
     {
+        
 
         $request->validate([
            'name' => 'required|min:3|max:255', 
            'description' => 'nullable|min:3|max:10000', 
            'photo' => 'required|image', 
         ]);
-
-        dd('OK');
 
        //mostra dados da requisição
        // dd($request->all());
@@ -85,7 +84,7 @@ class ProductController extends Controller
        //dd($request->input('teste', 'default'));
        //dd($request->except('_token', 'name_'));
        
-       if ($request->file ('photo')-> isValid()) {
+       if ($request->file('photo')->isValid()) {
            //fazer upload com patch
 
          //     dd($request->file('photo')->store('products'));
@@ -94,6 +93,9 @@ class ProductController extends Controller
          dd($request->file('photo')->storeAs('products', $nameFile));
 
          }
+
+    
+          
     }
 
     /**
