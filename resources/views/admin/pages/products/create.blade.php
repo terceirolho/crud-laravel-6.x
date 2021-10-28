@@ -31,8 +31,8 @@
          // aonde exatamente, nao consegui ver
           //somente  o espaço? Sim! :) credo, obrigado --> 
     
-    <input type="text" name="name" placeholder="Nome:" > 
-    <input type="text" name="description" placeholder="Descrição:" > 
+    <input type="text" name="name" placeholder="Nome:" value= " {{old('name') }}"> 
+    <input type="text" name="description" placeholder="Descrição:" value = "{{old('description')  }}"> 
     <input  type="file" name="photo">
     <button type="submit"> Enviar </button> 
     
